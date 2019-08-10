@@ -60,12 +60,7 @@ function initGracePeriod(ply)
 		timer.Create("NLRTimer_"..ply:SteamID(), 1, ply:GetNWInt("time"), function()
 
 			if (ply:GetNWInt("PressedF2") == 1) then
-				--Here's where I would give the player his weapons back.
-				--Again haven't figured that out yet.
-
-				/**
-					I FIGURED IT OUT FUCK YEAH! FUCK THAT PREVIOUS COMMENT I FUCKING DID IT
-				**/
+					
 				giveWeapons(ply)
 				sendNetMessage(ply, 'Timer Destroy Message', "Your spawn protection has ended.")
 				ply:SetNWInt("justdied", 0)
